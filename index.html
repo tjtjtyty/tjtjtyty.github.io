@@ -154,6 +154,75 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-第一次读书报告" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/17/第一次读书报告/">第一次读书报告</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/17/第一次读书报告/" class="archive-article-date">
+  	<time datetime="2019-11-17T11:01:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、周末总结"><a href="#一、周末总结" class="headerlink" title="一、周末总结"></a>一、周末总结</h3><h4 id="1、熟悉并使用原形工具"><a href="#1、熟悉并使用原形工具" class="headerlink" title="1、熟悉并使用原形工具"></a>1、熟悉并使用原形工具</h4><p>  Axure是一款简单易上手的原形工具，在室友的帮助下，我简单制作了图书管理系统的原形，其中的个性化推荐部分是我重点关注的地方，结合推荐算法，以满足用户的需求。</p>
+<h4 id="2、推荐算法"><a href="#2、推荐算法" class="headerlink" title="2、推荐算法"></a>2、推荐算法</h4><p>推荐算法的核心是协同过滤，传统有两种方法，基于用户的协同过滤方法，基于物品相似度的协同过滤方法，其主要问题在于用户矩阵稀疏，冷启动等问题。最近看了基于一跳信任模型的协同过滤算法，通过采用用户之间的信任信息和用户对项目的评分信息，建立信任模型，在此模型的基础上建立用户之间新的信任机制，这篇论文，通过提出一种新的信任模型来改进信任机制的一个问题——信任的弱传递性问题。主要计算步骤为：<br>（1）用户对项目信任度的计算<br>直接信任计算公式<br><img src="https://ftp.bmp.ovh/imgs/2019/11/3fa0c60013efe1d1.jpg" alt></p>
+<p>间接信任计算公式<br><img src="https://ftp.bmp.ovh/imgs/2019/11/9b94d76ae630738b.jpg" alt><br>这是用户对项目的直接信任。设 j 为用户 A 未直接评价过的项目，项目 j与项目i之间的相似度为Isim，</p>
+<p>（2）用户之间信任度计算以<br>设目标用户A和用户B之间存在k个直接信任 属性，n−k 个间接信任属性，则目标用户 A 与用户 B 的信任距离为D<sub>A-&gt;B</sub>,其中j<sub>1</sub>,j<sub>2</sub>,…,j<sub>k</sub>为目标用户 A 和用户 B 之间的直接信任属性分量的索引号,j<sub>k+1</sub>,…,j<sub>k+m</sub>为目 标用户 A 和用户 B 之间的间接信任属性分量的索引号<br><img src="https://ftp.bmp.ovh/imgs/2019/11/e37c2cfbadc3a0b2.jpg" alt><br> 2 个用户之间的信任度为 Tr<sup>A-&gt;B</sup>,<br> <img src="https://ftp.bmp.ovh/imgs/2019/11/a548796118bc0fac.jpg" alt></p>
+<p>（3）信任度和传统的相似度二维拟合<br>用户总体评分趋势采用余弦相似性 公式计算<br><img src="https://ftp.bmp.ovh/imgs/2019/11/f3318215eeb9073f.jpg" alt><br>本文在拟 合时，摒弃了以往的线性拟合的方式，而是将用 户 A和用户B的相似度与信任度联合看作二维平 面的一个点, 改变了原有的单一 直线上点的拟合，扩展一个信任维度,这种计算方式会能够把原来降 低维度后缺省的“个体评分”差异体现出来。这 个点离原点的加权距离代表了用户的最终权重<br><img src="https://ftp.bmp.ovh/imgs/2019/11/e4d25e3d583be97f.jpg" alt></p>
+<h4 id="3、关于智慧课堂的准备"><a href="#3、关于智慧课堂的准备" class="headerlink" title="3、关于智慧课堂的准备"></a>3、关于智慧课堂的准备</h4><p>所谓智慧课堂，即通过先进的智慧教学模式，进行课堂教学行为。智慧教学以教学组织结构为主线，主要有两种学习方式，分组合作型学习和个人自适应学习。智慧课堂从依赖于存在教师头脑中的教学经验转向依赖于对海量教学数据的分析<br>（1）人自适应学习，个人学习空间是其中的核心环节，每个学生或者学习者都应有一个具备学情分析报告、微课、预习与作业、巩固复习作业及资源库的综合个人学习空间，基于学生学情自适应推送难度不一的练习等。<br>（2）分组合作型学习，强调构建学习共同体，通过智慧教室多屏协作等的形式对小组讨论与演示作出最大的支持，强调项目制学习。<br>（3）动态伴随式学习评价，智慧课堂教学中采取动态伴随式学习评价，即贯穿课堂教学全过程的学习诊断与评价，并可根据需求实时反馈评价结果，包括课前预习测评和反馈、课堂实时检测评价和即时反馈、课后作业评价和跟踪反馈，从而实现了即时、动态的诊断分析和评价信息反馈，重构形成性教学评价体系<br>综上，是百度百科上的解释。<br>这样说来，智慧教学系统可能会是这个样子的，<br><img src="https://ftp.bmp.ovh/imgs/2019/11/4f1f18022ca29b71.jpg" alt></p>
+<h4 id="4、关于下周的计划"><a href="#4、关于下周的计划" class="headerlink" title="4、关于下周的计划"></a>4、关于下周的计划</h4><p>（1）继续看关于个性化推荐的论文，深入了解信任机制在推荐中的作用<br>（2）完善图书管理系统的原形<br>（3）扩充智慧课堂，完善其细节</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/17/第一次读书报告/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-小程序开发" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
